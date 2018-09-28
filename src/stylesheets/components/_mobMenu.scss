@@ -1,0 +1,36 @@
+.mob-menu__wrap {
+    position: fixed;
+    z-index: 1000;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(210, 172, 91, 0.92);
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       height: 100%;
+    }
+    display: none;
+    ul {
+        padding: 0;
+        max-width: 250px;
+        margin: 0 auto;
+        li {
+            list-style: none;
+            margin: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+            padding: 0 10px;
+            a {
+                color: #fff;
+                font-family: 'mbold';
+                font-size: 16px;
+                text-transform: uppercase;
+                line-height: 35px;
+                
+            }
+        }
+    }
+}

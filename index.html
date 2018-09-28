@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/stylesheets/style.css">
+    <link rel="stylesheet" href="./node_modules/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <title>spa</title>
+</head>
+<body>
+
+    <div class="container top-menu">
+        <div class="sib top-menu__logo">
+            <img width="200" src="./src/media/logo.svg" alt="">
+        </div>
+        <div class="sib top-menu__music">
+            <p><img width="30" src="./src/media/music off.svg" width="50" alt=""> <span>on</span> </p>
+        </div>
+        <div class="sib top-menu__adress">
+            <p><img width="30" src="./src/media/point.svg" width="50" alt="">вул. Набережна 29, с. Вишеньки, «Вишневе мiстечко»</p>
+        </div>
+        <div class="sib top-menu__phone">
+            <span class="top-phone"><img width="30" src="./src/media/phone.svg" width="50" alt=""> <a href="#">+38 (044) 58-58-777</a> </span>
+        </div>
+        <div class="sib top-menu__soc">
+                <span class="top-socials">
+                    <a href="#"><img  width="30" src="./src/media/insta.png" alt=""></a>
+                    <a href="#"><img  width="30" src="./src/media/face.png" alt=""></a>
+                </span>
+        </div>
+
+        <div class="burder">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div id="fullpage">
+            <div class="section topper">
+                    <div>
+                            <div class="video-wrapper">
+                                <video id="bgvid" width=""  loop muted data-autoplay >
+                                    <source src="./src/media/preza.mp4" type="video/mp4"> 
+                                </video>
+                            </div>
+                            <div class="container one main">
+                                <!-- left -->
+                                <div class="main__article">
+                                    <p class="main__article--pre">
+                                        Для всієї родини
+                                    </p>
+                                    <h1 class="main__article--title">
+                                        <span>КРАЩИЙ ВІДПОЧИНОК </span> <br>
+                                        ДЛЯ ВАШОЇ СІМ'Ї В SPA <br>
+                                        FAMILY WISH SPACE
+                                    </h1>
+                                    <p class="main__article--text">
+                                        Wish Family Space пропонує новий рівень відпочинку для всієї родини. Наш простір дозволяе сконцентруватись на відчуттях у тілі, відпустити думки та відчути радість сьогодення. Коли відпустку чекати довго, а організм вимагає релаксу – декілька днів за містом врятують положення.  Тиха атмосфера у поєднанні зі спа-ритуалами подарують найкращі спогади про відпочинок.
+                                    </p>
+                                </div>
+                                <!-- right -->
+                                <div class="main__form">
+                                    <div class="main__form_the-form">
+                                        <h4>
+                                                <span>Забронюйте відпочинок</span> <br>
+                                                для ваших улюблених
+                                        </h4>
+                                        <form id="form" action="send.php">
+                                            <input type="text" name="name" placeholder="Ваше им’я" autocomplete="off">
+                                            <input type="number" name="phone" placeholder="Ваш телефон" autocomplete="off">
+                                            <input type="email" name="email" placeholder="Ваш @" autocomplete="off">
+                                            <input type="text" name="date" placeholder="Дата відвідування" autocomplete="off">
+                                            <button type="submit"></button>
+                                        </form>
+                                        <div class="rama"></div>
+                                    </div>
+                                </div>
+
+                                <div class="transform-quatro"></div>
+                        </div>
+                </div>
+            </div> 
+            <!-- tabs with slider -->
+            <div class="section two">
+                    <div class="tab container" id="tab">
+                            <ul class="tabs">
+                                <li class="current"><a href="#">SPA-ПРОЦЕДУРИ</a></li>
+                                <li><a href="#">SPA-ТУРИ</a></li>
+                                <li><a href="#">МАСАЖ</a></li>
+                                <li><a href="#">КОСМЕТОЛОГІЯ</a></li>
+                                <li><a href="#">КОРЕКЦІЯ ФІГУРИ</a></li>
+                                <li><a href="#">МАНІКЮР, ПЕДИКЮР</a></li>
+                            </ul> 
+                            <div class="tab_content">
+                                <div class="tabs_item">
+                                    <div class="tabs_item-wrap">
+                                        <section>
+                                            <div class="left lefrig" style="background: url('./src/media/im1.png')">
+                                                <div class="left__card">
+                                                    <p class="left__card--title">КЛАСИЧНИЙ ХАМАМ</p>
+                                                    <div class="left__card__counts counts">
+                                                        <p class="counts--price">1500</p>
+                                                        <p class="counts--time">90</p>
+                                                    </div>
+                                                    <p class="left__card--text">
+                                                            Класичний турецький пілінг рукавичкою кесе та пінний масаж на гарячому мармуровому столі. Протягом 90 хв спа-фахівець супроводжуватиме Вас в глибини чистоти і розслаблення, адаптуючи температуру повітря і води індивідуально для Вас.
+                                                    </p>
+                                                    <a class="left__card--btn" href="#!">ВІДВІДАТИ</a>
+                                                </div>
+                                            </div>
+                                            <div class="right lefrig" style="background:url('./src/media/im2.png')"></div>
+                                        </section>
+                                        <section>
+                                                <div class="left lefrig" style="background: url('./src/media/im1.png')">
+                                                    <div class="left__card">
+                                                        <p class="left__card--title">КЛАСИЧНИЙ ХАМАМ</p>
+                                                        <div class="left__card__counts counts">
+                                                            <p class="counts--price">1500</p>
+                                                            <p class="counts--time">90</p>
+                                                        </div>
+                                                        <p class="left__card--text">
+                                                                Класичний турецький пілінг рукавичкою кесе та пінний масаж на гарячому мармуровому столі. Протягом 90 хв спа-фахівець супроводжуватиме Вас в глибини чистоти і розслаблення, адаптуючи температуру повітря і води індивідуально для Вас.
+                                                        </p>
+                                                        <a class="left__card--btn" href="#!">ВІДВІДАТИ</a>
+                                                    </div>
+                                                </div>
+                                                <div class="right lefrig" style="background:url('./src/media/im2.png')"></div>
+                                        </section>
+                                    </div>
+                                </div>
+                                
+                            </div> 
+                    </div> 
+            </div>
+            <!-- run string with albums -->
+            <div class="section three r-cover">
+                <div class="three__wrap album__wrap">
+                    <a href="./src/media/1.jpg" data-fancybox class="three__wrap_item" style="background:url('./src/media/1.jpg')">
+                        <p class="three__wrap_item--title">масаж</p>
+                        <p class="three__wrap_item--motion">неймовірні відчуття</p>
+                    </a>
+                    <a href="./src/media/2.jpg" data-fancybox class="three__wrap_item" style="background:url('./src/media/2.jpg')">
+                        <p class="three__wrap_item--title">масаж</p>
+                        <p class="three__wrap_item--motion">неймовірні відчуття</p>
+                    </a>
+                    <a href="./src/media/3.jpg" data-fancybox class="three__wrap_item" style="background:url('./src/media/3.jpg')">
+                        <p class="three__wrap_item--title">масаж</p>
+                        <p class="three__wrap_item--motion">неймовірні відчуття</p>
+                    </a>
+                    <a href="./src/media/4.jpg" data-fancybox class="three__wrap_item" style="background:url('./src/media/4.jpg')">
+                        <p class="three__wrap_item--title">масаж</p>
+                        <p class="three__wrap_item--motion">неймовірні відчуття</p>
+                    </a>
+                    <a href="https://cdn.dribbble.com/users/545884/screenshots/3576036/liberosis_--_10.png" data-fancybox class="three__wrap_item" style="background:url('https://cdn.dribbble.com/users/545884/screenshots/3576036/liberosis_--_10.png')">
+                        <p class="three__wrap_item--title">масаж</p>
+                        <p class="three__wrap_item--motion">неймовірні відчуття</p>
+                    </a>
+                </div>
+               
+            </div> 
+            <div class="section three r-cover" id="insta">
+                <div class="three__wrap comments__wrap">
+                    <!-- render commments from js -->
+                </div>
+                <div class="three__wrap image__wrap">
+                    <!-- rest api insta renders here -->
+                </div>
+            </div>
+
+            <div class="section mappe-wrap">
+                <div id="map">
+                    <div class="container">
+                        <div class="foot__label">
+                            <p class="waiting">ЧЕКАЄМО НА ВАС!</p>
+                            <p class="adress">вул. Набережна 29, с. Вишеньки, «Вишневе мiстечко»
+                                Бориспiльський р-н, Київська обл., 08341</p>
+                            <a class="phone" href="#">+38 (044) 58-58-777</a>
+                            <div class="socials">
+                                <a href="#">
+                                    <img src="./src/media/insta.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="./src/media/face.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="footer">
+                    <div class="container">
+                            <p>2018 WISH family spa</p>
+                            <span>
+                                    <img src="./src/media/opex.png" alt="">
+                            </span>
+                    </div>
+                </div>
+            </div> 
+    </div>
+
+    <div class="mob-menu__wrap">
+        <div>
+            <ul>
+                <li>
+                    <a class="welcom" href="#!">welcome</a>
+                </li>
+                <li>
+                    <a class="serv-m" href="#!">послуги та цiни</a>
+                </li>
+                <li>
+                    <a class="gal-m" href="#!">галерея</a>
+                </li>
+                <li>
+                    <a class="feeds-m" href="#!">вiдгуки</a>
+                </li>
+                <li>
+                    <a class="cont-m" href="#!">контакти</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('#form').submit(function(e){
+            e.preventDefault();
+            console.log($(this).serialize());
+            $.ajax({
+              type: "POST",
+              url: "send.php",
+              data: $(this).serialize(),
+              success: function() {
+                alert('your mail sent');
+                $('#form').find('input, textarea').val('');
+              },
+              wrong: function() {
+                alert('try again');
+              }
+            })
+           return false;
+          })
+        })
+      </script>
+
+    <script src="./node_modules/fullpage.js/dist/fullpage.min.js"></script>  
+    <script src="./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
+    <script src="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+    <!-- <script src="./node_modules/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script> -->
+    <script src="./src/scripts/index.js"></script>
+</html>

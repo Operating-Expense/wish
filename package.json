@@ -1,0 +1,21 @@
+{
+  "name": "wish",
+  "version": "1.0.0",
+  "description": "landing trend",
+  "main": "index.js",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.4.2",
+    "fancybox": "^3.0.1",
+    "fullpage.js": "^3.0.2",
+    "gsap": "^2.0.2",
+    "jquery": "^3.3.1",
+    "scrollmagic": "^2.0.5",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ant",
+  "license": "ISC"
+}

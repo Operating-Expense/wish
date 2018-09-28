@@ -1,0 +1,108 @@
+.main__form_the-form {
+            overflow: hidden;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(210, 172, 91, 0.57);
+            position: relative;
+            float: right;
+    h4 {
+        text-align: center;
+        font-family: 'mbold';
+        font-size: 21px;
+        color: #fff;
+        margin-bottom: 5px;
+        span {
+            color: #d2ad5b;
+        }
+    }
+    .rama {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        border: 1px solid $gold;
+        border-bottom-color: transparent;
+        z-index: -10;
+        &:before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            bottom: -1px;
+            height: 1px;
+            width: 162px;
+            background: $gold;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+            height: 1px;
+            width: 162px;
+            background: $gold;
+        }
+    }
+}
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    input {
+        background: transparent;
+        border: navajowhite;
+        border-bottom: 1px solid #d2ac5ba1;
+        width: 100%;
+        max-width: 60%;
+        text-align: center;
+        margin-top: 30px;
+        font-family: 'mregular';
+        font-size: 13px;
+        color: #bfbfbf;
+        line-height: 20px;
+        &::placeholder {
+            font-family: 'mregular';
+            font-size: 13px;
+            color: #bfbfbf;
+        }
+       
+    }
+    button {
+        position: absolute;
+        bottom: -175px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        background: transparent;
+        // background: #d2ad5b;
+        transform: rotate(45deg);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        z-index: 1000;
+        background: #d5b266;
+        &:after {
+            content: 'OK';
+            transform: rotate(-45deg);
+            position: absolute;
+            top: -44px;
+            left: -50px;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+            width: 35px;
+            height: 13px;
+            font-family: 'mbold';
+            font-size: 21px;
+        }
+    }
+}

@@ -1,0 +1,304 @@
+
+
+@media (min-width: 1700px) {
+    // .main__form_the-form {
+    //     height: 700px;
+    // }
+}
+@media(max-width: 1450px) {
+    .top-menu {
+        height: 100px;
+    }
+}
+
+@media(max-width: 1250px) {
+    
+    .video-wrapper #bgvid {
+        width: initial;
+        height: 100%;
+    }
+    .top-menu__logo img {
+        margin-top: 35px;
+    }
+    .top-menu__phone, .top-menu__soc {
+        display: none;
+    }
+    .top-menu {
+        max-width: 900px;
+        padding: 0 20px;
+    }
+    .main__article {
+        text-align: center
+    }
+    .main__article--pre:after {
+        content: initial
+    }
+    .main__article--pre {
+        font-size: 10px;
+        margin: 0
+    }
+    .main__article--title {
+        font-size: 27px;
+    }
+    .main__article--text {
+        font-size: 11px;
+        max-width: 370px;
+        text-align: center;
+        line-height: 18px;
+    }
+    .main .main__form_the-form {
+        width: 360px;
+        height: 360px;
+    }
+    .main .main__form_the-form h4 {
+        font-size: 15px;
+    }
+    .main #form input, .main #form input::placeholder {
+        font-size: 10px;
+        margin-top: 20px
+    }
+    .main #form button {
+        bottom: -147px;
+    }
+    .main #form button:after {
+        font-size: 15px;
+        top: -55px;
+        left: -60px;
+    }
+    
+
+    .main {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin: 150px 0;
+        grid-row-gap: 50px;
+    }
+
+    .one .transform-quatro {
+        right: 0;
+        top: calc(0px + 748px);
+        left: 0;
+    }
+
+
+    //tabs
+    .tabs a {
+        font-size: 12px;
+    }
+    .tabs_item-wrap section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tabs_item .left {
+        margin-bottom: 18px;
+    }
+    #tab {
+        margin: 120px auto 120px;
+        padding: 0 20px
+    }
+    .tabs_item-wrap .slick-arrow {
+        top: initial;
+        bottom: 200px;
+    }
+    .tabs_item-wrap .PrevArrow {
+        left: 0;
+    }
+    .tabs_item .left__card {
+        height: 100%;
+        padding: 35px 30px;
+    }
+    .tabs_item .left__card--title {
+        font-size: 15px;
+    }
+    .tabs_item .left__card--text {
+        font-size: 10px;
+        margin-bottom: 18px;
+    }
+    .tabs_item .left__card .counts--price, .tabs_item .left__card .counts--time, .tabs_item .left__card--btn {
+        font-size: 11px;
+    }
+
+
+    // autorun
+    .three__wrap {
+        max-height: 230px
+    }
+
+    .r-cover:after {
+        display: none;
+    }
+
+
+    //footer
+    #map {
+        background: url('../media/foot.png')
+    }
+    #map .container {
+        align-items: flex-start;
+        justify-content: center;
+    }
+    #map .foot__label {
+        max-height: 350px;
+        max-width: 515px;
+        width: 100%;
+        margin: 120px 20px 0;
+        padding: 80px 15px;
+    }
+    #map .foot__label .waiting {
+        font-size: 15px;
+    }
+    #map .foot__label .adress, #map .foot__label .phone {
+        font-size: 12px;
+    }
+
+
+
+    .fp-tableCell,
+    .fp-section {
+        height: auto !important;
+    }
+    .mappe-wrap {
+        height: 100vh !important;
+        margin-top: 50px
+    }
+    .footer .container {
+        margin: 0 15px
+    }
+}
+
+
+
+@media(max-width: 768px) {
+    .top-menu {
+        background: #fff;
+        height: 60px;
+    }
+    .top-menu__logo img {
+        margin-top: 0;
+        width: 100px !important;
+    }
+    .top-menu__music, .top-menu__adress {
+        display: none
+    }
+    .top-menu .burder {
+        display: flex;
+    }
+
+    .main__article--title {
+        font-size: 16px;
+    }
+    .main__article--text {
+        display:none
+    }
+    .main .main__form_the-form h4 {
+        font-size: 11px;
+    }
+    .main #form input, .main #form input::placeholder {
+        font-size: 9px;
+        margin-top: 10px;
+    }
+    .main .main__form_the-form {
+        max-width: 290px;
+        max-height: 290px;
+        // width: 100%;
+        // margin: 0 10px;
+    }
+    .main #form button {
+        bottom: -135px;
+    }
+    .main #form button:after {
+        font-size: 12px;
+        top: -76px;
+        left: -78px;
+    }
+    .main .main__form_the-form .rama {
+        top: 7px;
+        left: 7px;
+        right: 7px;
+        bottom: 7px;
+    }
+    .one .transform-quatro {
+        width: 300px;
+        height: 300px;
+        top: calc(0px + 423px);
+    }
+    .one .transform-quatro:after {
+        bottom: 25px;
+        right: 25px;
+        width: 220px;
+        height: 220px;
+    }
+    // ul
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tabs a:before {
+        top: 0;
+        left: initial;
+        right: -25px;
+    }
+    .tabs_item .right {
+        display: none;
+    }
+    .tabs_item .lefrig {
+        max-width: 275px;
+        width: 100%;
+        height: 290px;
+    }
+    .tabs_item .left:after {
+        width: 95%;
+        height: 95%;
+    }
+    .tabs_item .left__card--title {
+        font-size: 12px;
+    }
+    .tabs_item .left__card--text {
+        font-size: 9px;
+    }
+    .tabs_item .left__card .counts--price, .tabs_item .left__card .counts--time, .tabs_item .left__card--btn {
+        font-size: 10px;
+    }
+    .tabs_item .left__card--btn {
+        padding: 5px 10px;
+    }
+    .tabs_item .left__card {
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: -110px
+    }
+    .tabs_item-wrap section {
+        padding-bottom: 30px;
+    }
+    .tabs_item-wrap .NextArrow {
+        right: -20px;
+    }
+    .tabs_item-wrap .PrevArrow {
+        left: -15px;
+    }
+    // .slick-list, .two {
+    //     overflow: visible !important;
+    // }
+
+    .three__wrap .images {
+        width: 440%;
+    }
+    #map .foot__label {
+        margin-top: 20px;
+    }
+    #map {
+        background-position-y: 120px !important;
+    }
+}
+
+
+@media(max-width: 344px) {
+    .main .main__form_the-form {
+        max-width: 237px;
+       max-height: 257px;
+    }
+    .one .transform-quatro {
+        top: calc(0px + 407px);
+    }
+}

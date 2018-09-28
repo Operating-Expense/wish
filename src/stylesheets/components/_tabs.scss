@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+// color
+$color: blue;
+
+// TAB ~~~~~~~~~~~~~~~ (.)(.)
+#tab {
+	// padding-top: 50px;
+	// margin-bottom: 20px;
+	position: relative;
+	// overflow: hidden;
+	// background: #fff;
+	// width: 70%;
+	margin: 0 auto;
+
+    color: #888;
+    border: 1px solid transparent;
+    min-height: 470px;
+    //height: 100vh;
+}
+
+
+//tab btns
+.tabs {
+    display: flex;
+    justify-content: space-between;
+	width: 100%;
+    max-width: 1060px;
+    padding: 0;
+    margin: 0 auto;
+    //border: 1px solid teal;
+	li {
+        list-style: none;
+	}
+
+	a {
+        font-family: 'mregular';
+        font-size: 16px;
+        color: #252424;
+        position: relative;
+		
+        &:before {
+            content: url('../media/down.png');
+            position: absolute;
+            top: -25px;
+            left: 40%;
+            margin: auto;
+            opacity: 0;
+            transition: .5s ease-out;
+            transform: scaleX(.4);
+        }
+    }
+    .current {
+        a {
+            font-family: 'mbold';
+
+            background: transparent;
+            color: #000;
+            
+            &:before {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+
+        }
+    }
+}
+
+.tab_content {
+    width: 100%;
+    max-width: 1060px;
+    margin: 30px auto 0;
+
+   
+    
+}
+.tabs_item {
+	display: none;
+   
+    &-wrap { //slider enter
+        position: relative;
+       
+        section {
+            //border: 1px solid darkblue;
+            display: flex !important;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            // .left {
+            //     float: left;
+            // }
+            // .right {
+            //     float: right;
+            // }
+        }
+        //border: 1px solid darkblue;
+        .slick-arrow {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 10px;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+            background-size: contain !important;
+        }
+        .PrevArrow {
+            left: -50px;
+            //background: red;
+            background: url('../media/left-ar.png') no-repeat;
+        }
+        .NextArrow {
+            right: -10px;
+            background: url('../media/right-arr.png') no-repeat;
+        }
+    }
+    .lefrig {
+        background-position: center;
+        background-size: cover;
+        width: 400px;
+        height: 420px;
+        //border: 1px solid seagreen;
+    }
+    .left {
+        position: relative;
+       &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 90%;
+            height: 90%;
+            border: 1px solid $gold;
+       }
+        //float: left;
+        &__card {
+            position: absolute;
+            background: $gold_opacity;
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: -44px;
+            color: #fff;
+            padding: 10px 30px;
+            z-index: 44;
+         
+            &--title {
+                font-family: 'mbold';
+                font-size: 22px;
+                margin-bottom: 0;
+            }
+            .counts {
+                display: flex;
+                &--price {
+                    width: 40%;
+                    position: relative;
+                    &:before {
+                        margin-right: 4px;
+                        content: url('../media/cardpay.svg');
+                    }
+                }
+                &--time {
+                    width: 50%;
+                    position: relative;
+                    &:before {
+                        margin-right: 4px;
+                        content: url('../media/clocktime.svg');
+                    }
+                }
+            }
+            &--text {
+                margin-top: 0;
+                font-family: 'mregular';
+                font-size: 14px;
+            }
+            &--btn {
+                border: 1px solid #fff;
+                padding: 10px;
+                color: #fff;
+            }
+        }
+    }
+    .right {
+      
+        //float: right;
+    }
+	h4 {
+		font-weight: bold;
+		color: $color;
+    font-size: 20px;
+	}
+
+	img {
+		width: 200px;
+		float: left;
+		margin-right: 30px;
+	}
+
+	&:first-child {display: block;}
+}
+
+.current a {
+	color: #fff;
+	background: $color;
+}
+
+// END TAB ~~~~~~~~~~~~~~~ (.)(.)
+
+
+
+@keyframes ProgressDots{from{opacity:0px;}to{opacity:1;}}

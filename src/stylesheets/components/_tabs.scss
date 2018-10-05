@@ -121,9 +121,39 @@ $color: blue;
         width: 400px;
         height: 420px;
         //border: 1px solid seagreen;
+    
     }
     .left {
         position: relative;
+        transition: 2s ease-in-out;
+        transition-delay: .4;
+        transform: translateX(20px) ;
+        &_sp_wrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            //border: 1px solid red;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            transition: 5s ease-in;
+        }
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
        &:after {
             content: '';
             position: absolute;
@@ -147,6 +177,12 @@ $color: blue;
             color: #fff;
             padding: 10px 30px;
             z-index: 44;
+
+
+            transition: 2s ease-in-out;
+            transition-delay: .4;
+            transform: translateX(50px) ;
+
          
             &--title {
                 font-family: 'mbold';
@@ -176,6 +212,9 @@ $color: blue;
                 margin-top: 0;
                 font-family: 'mregular';
                 font-size: 14px;
+                max-height: 128px;
+                overflow: hidden;
+                margin-bottom: 30px;
             }
             &--btn {
                 border: 1px solid #fff;
@@ -183,10 +222,40 @@ $color: blue;
                 color: #fff;
             }
         }
+       
     }
     .right {
-      
+        transition: 2s ease-in-out;
+        //transition-delay: .4;
+        //transition-delay: .6s;
+        transform: translateX(30px) ;
         //float: right;
+        &_sp_wrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            //border: 1px solid red;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            transition: 5s ease-in;
+        }
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
     }
 	h4 {
 		font-weight: bold;
@@ -209,6 +278,12 @@ $color: blue;
 }
 
 // END TAB ~~~~~~~~~~~~~~~ (.)(.)
+
+
+
+.slick-active .left__card, .slick-active .left, .slick-active .right {
+    transform: translateX(0) 
+}
 
 
 

@@ -103,11 +103,115 @@ body {
   overflow: hidden;
 }
 
-.top-menu {
+#preloader {
+  position: fixed;
+  z-index: 1000000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d2ad5b;
+}
+
+#preloader #Layer_1 {
+  position: absolute;
+  left: 0;
+  margin: auto;
+  top: 100px;
+}
+
+#preloader #Layer_1 .line {
+  stroke-width: 1;
+  stroke: rgba(255, 255, 255, 0.397);
+  fill: rgba(255, 255, 255, 0.644);
+}
+
+#preloader #Layer_2 {
+  position: absolute;
+  left: 0;
+  margin: auto;
+  top: 180px;
+}
+
+#preloader #Layer_2 .line {
+  stroke-width: 1;
+  stroke: rgba(255, 255, 255, 0.397);
+  fill: rgba(255, 255, 255, 0.644);
+}
+
+#preloader .flower {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 300px;
+  margin: auto;
+  z-index: 10000;
+  -webkit-animation: dash 2s;
+          animation: dash 2s;
+  opacity: 1;
+}
+
+#preloader .prostin {
+  position: absolute;
+  right: 0;
+  width: 0%;
+  top: 100px;
+  background: #d2ad5b;
+  z-index: 10000;
+  height: 100%;
+  -webkit-animation: slidein 1s linear;
+          animation: slidein 1s linear;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@-webkit-keyframes dash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#navi-wrap {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
+}
+
+.top-nav {
+  background: rebeccapurple !important;
+}
+
+.top-menu {
   margin: auto;
   z-index: 1000;
   display: -webkit-box;
@@ -142,6 +246,10 @@ body {
 
 .top-menu .sib span img {
   margin-bottom: -8px;
+}
+
+.top-menu .top-menu__music {
+  cursor: pointer;
 }
 
 .top-menu .burder {
@@ -554,6 +662,44 @@ body {
 
 .tabs_item .left {
   position: relative;
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  -webkit-transition-delay: .4;
+          transition-delay: .4;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+.tabs_item .left_sp_wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.tabs_item .left img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  -webkit-transition: 5s ease-in;
+  transition: 5s ease-in;
+}
+
+.tabs_item .left:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .tabs_item .left:after {
@@ -579,6 +725,12 @@ body {
   color: #fff;
   padding: 10px 30px;
   z-index: 44;
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  -webkit-transition-delay: .4;
+          transition-delay: .4;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
 }
 
 .tabs_item .left__card--title {
@@ -617,12 +769,54 @@ body {
   margin-top: 0;
   font-family: 'mregular';
   font-size: 14px;
+  max-height: 128px;
+  overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .tabs_item .left__card--btn {
   border: 1px solid #fff;
   padding: 10px;
   color: #fff;
+}
+
+.tabs_item .right {
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.tabs_item .right_sp_wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.tabs_item .right img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  -webkit-transition: 5s ease-in;
+  transition: 5s ease-in;
+}
+
+.tabs_item .right:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .tabs_item h4 {
@@ -644,6 +838,11 @@ body {
 .current a {
   color: #fff;
   background: blue;
+}
+
+.slick-active .left__card, .slick-active .left, .slick-active .right {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @-webkit-keyframes ProgressDots {
@@ -897,7 +1096,7 @@ body {
   position: absolute;
 }
 
-#map .container {
+.mappe-wrap .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -907,10 +1106,11 @@ body {
   height: 100%;
 }
 
-#map .foot__label {
+.mappe-wrap .foot__label {
   width: 50%;
   background: #fff;
   height: 60vh;
+  max-height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -930,7 +1130,7 @@ body {
   position: relative;
 }
 
-#map .foot__label:after {
+.mappe-wrap .foot__label:after {
   content: '';
   position: absolute;
   width: 90%;
@@ -943,14 +1143,14 @@ body {
   border: 1px solid #d5b266;
 }
 
-#map .foot__label .waiting {
+.mappe-wrap .foot__label .waiting {
   font-family: 'mbold';
   font-size: 22px;
   color: #000;
   margin: 0;
 }
 
-#map .foot__label .adress {
+.mappe-wrap .foot__label .adress {
   font-family: 'mlight';
   font-size: 15px;
   color: silver;
@@ -958,7 +1158,7 @@ body {
   max-width: 420px;
 }
 
-#map .foot__label .phone {
+.mappe-wrap .foot__label .phone {
   font-family: 'mlight';
   font-size: 15px;
   color: silver;
@@ -995,6 +1195,67 @@ body {
 
 .footer .container img {
   max-width: 70px;
+}
+
+.pre-prp {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #d2ad5b;
+  z-index: 12000;
+}
+
+.pre-prp #Layer_1 {
+  position: absolute;
+  left: 0;
+  margin: auto;
+  top: -70px;
+  bottom: 0px;
+}
+
+.pre-prp #Layer_1 .line {
+  stroke-width: 1;
+  stroke: rgba(255, 255, 255, 0.397);
+  fill: rgba(255, 255, 255, 0.644);
+}
+
+.pre-prp #Layer_2 {
+  position: absolute;
+  left: 0;
+  margin: auto;
+  top: 70px;
+  bottom: 0px;
+}
+
+.pre-prp #Layer_2 .line {
+  stroke-width: 1;
+  stroke: rgba(255, 255, 255, 0.397);
+  fill: rgba(255, 255, 255, 0.644);
+}
+
+.pre-prp .prostin {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  top: 0px;
+  background: #d2ad5b;
+  z-index: 10000;
+  height: 100%;
+}
+
+.pre-prp .flower {
+  max-width: 100px;
+  position: absolute;
+  margin: auto;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 @media (max-width: 1450px) {
@@ -1116,6 +1377,7 @@ body {
   .tabs_item .left__card--text {
     font-size: 10px;
     margin-bottom: 18px;
+    max-height: 98px;
   }
   .tabs_item .left__card .counts--price, .tabs_item .left__card .counts--time, .tabs_item .left__card--btn {
     font-size: 11px;
@@ -1129,7 +1391,7 @@ body {
   #map {
     background: url("../media/foot.png");
   }
-  #map .container {
+  .mappe-wrap .container {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1137,17 +1399,17 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #map .foot__label {
+  .mappe-wrap .foot__label {
     max-height: 350px;
     max-width: 515px;
     width: 100%;
     margin: 120px 20px 0;
     padding: 80px 15px;
   }
-  #map .foot__label .waiting {
+  .mappe-wrap .foot__label .waiting {
     font-size: 15px;
   }
-  #map .foot__label .adress, #map .foot__label .phone {
+  .mappe-wrap .foot__label .adress, .mappe-wrap .foot__label .phone {
     font-size: 12px;
   }
   .fp-tableCell,
@@ -1164,6 +1426,17 @@ body {
 }
 
 @media (max-width: 768px) {
+  #preloader #Layer_1, #preloader #Layer_2 {
+    max-height: 200px;
+  }
+  #preloader #Layer_1 {
+    top: 0;
+    bottom: 0;
+  }
+  #preloader #Layer_2 {
+    top: 70px;
+    bottom: 0;
+  }
   .top-menu {
     background: #fff;
     height: 60px;
@@ -1290,11 +1563,20 @@ body {
   .three__wrap .images {
     width: 440%;
   }
-  #map .foot__label {
+  .mappe-wrap .foot__label {
     margin-top: 20px;
   }
   #map {
     background-position-y: 120px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #preloader #Layer_1, #preloader #Layer_2 {
+    max-height: 100px;
+  }
+  #preloader .flower {
+    bottom: 120px;
   }
 }
 
@@ -1305,6 +1587,9 @@ body {
   }
   .one .transform-quatro {
     top: calc(0px + 407px);
+  }
+  #preloader .flower {
+    bottom: 100px;
   }
 }
 /*# sourceMappingURL=style.css.map */

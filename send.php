@@ -15,7 +15,7 @@ echo $name;
     $from = 'spa';
 
     $message = "Name: " . $name . "\r\n" . "Phone: " . $phone . "\r\n" . "Email: " . $email . "\r\n" . "Date: " . $date . "\r\n";
-    mail('spinne92@mail.ru', 'new post ', $message, 'From:'.$from);
+    mail('info@wishspace.com.ua', 'new post ', $message, 'From:'.$from);
     $redirect = isset($_SERVER['HTTP_REFERER'])? $_SERVER['HTTP_REFERER']:'index.html';
     exit();
 ?>

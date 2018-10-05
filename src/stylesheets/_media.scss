@@ -113,6 +113,7 @@
     .tabs_item .left__card--text {
         font-size: 10px;
         margin-bottom: 18px;
+        max-height: 98px;
     }
     .tabs_item .left__card .counts--price, .tabs_item .left__card .counts--time, .tabs_item .left__card--btn {
         font-size: 11px;
@@ -133,21 +134,21 @@
     #map {
         background: url('../media/foot.png')
     }
-    #map .container {
+    .mappe-wrap  .container {
         align-items: flex-start;
         justify-content: center;
     }
-    #map .foot__label {
+    .mappe-wrap  .foot__label {
         max-height: 350px;
         max-width: 515px;
         width: 100%;
         margin: 120px 20px 0;
         padding: 80px 15px;
     }
-    #map .foot__label .waiting {
+    .mappe-wrap  .foot__label .waiting {
         font-size: 15px;
     }
-    #map .foot__label .adress, #map .foot__label .phone {
+    .mappe-wrap  .foot__label .adress, .mappe-wrap  .foot__label .phone {
         font-size: 12px;
     }
 
@@ -169,6 +170,17 @@
 
 
 @media(max-width: 768px) {
+    #preloader #Layer_1, #preloader #Layer_2 {
+        max-height: 200px;
+    }
+    #preloader #Layer_1 {
+        top: 0;
+        bottom: 0;
+    }
+    #preloader #Layer_2 {
+        top: 70px;
+        bottom: 0;
+    }
     .top-menu {
         background: #fff;
         height: 60px;
@@ -284,7 +296,7 @@
     .three__wrap .images {
         width: 440%;
     }
-    #map .foot__label {
+    .mappe-wrap  .foot__label {
         margin-top: 20px;
     }
     #map {
@@ -292,6 +304,14 @@
     }
 }
 
+@media(max-width: 600px) {
+    #preloader #Layer_1, #preloader #Layer_2 {
+        max-height: 100px;
+    } 
+    #preloader .flower {
+        bottom: 120px;
+    }
+}
 
 @media(max-width: 344px) {
     .main .main__form_the-form {
@@ -300,5 +320,8 @@
     }
     .one .transform-quatro {
         top: calc(0px + 407px);
+    }
+    #preloader .flower {
+        bottom: 100px;
     }
 }

@@ -25,13 +25,99 @@ body {
     overflow: hidden;
 }
 
+#preloader {
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $gold;
+    #Layer_1 {
+        // width: 110%;
+        position: absolute;
+        left: 0;
+        margin: auto;
+        top: 100px;
+        .line {
+            stroke-width:1;
+            stroke: rgba(255, 255, 255, 0.397);
+            fill: rgba(255, 255, 255, 0.644);
+        }
+    }
+    #Layer_2 {
+        // width: 110%;
+        position: absolute;
+        left: 0;
+        margin: auto;
+        top: 180px;
+        .line {
+            stroke-width:1;
+            stroke: rgba(255, 255, 255, 0.397);
+            fill: rgba(255, 255, 255, 0.644);
+        }
+    }
+    .flower {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 300px;
+        margin: auto;
+        z-index: 10000;
+        animation: dash 2s;
+        opacity: 1;
+        //animation-delay: 1s;
+    }
+    .prostin {
+        position: absolute;
+        right: 0;
+        width: 0%;
+        top: 100px;
+        //background: rgba(255, 0, 0, 0.329);
+        background: #d2ad5b;
+        z-index: 10000;
+        height: 100%;
+        animation: slidein 1s linear;
+       
+    }
+}
+@keyframes slidein {
+    from {
+      width: 100%; 
+    }
+  
+    to {
+      width: 0%;
+    }
+  }
 
-.top-menu {
-    //display: none !important;
+@keyframes dash {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+  
+#navi-wrap {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    //background-image: linear-gradient(to bottom, #00000067, #3b3b3b67, #7777775e, #7777775e, transparent, transparent);
+    
+    //background: linear-gradient(180deg, rgba(135,135,135,0.4192051820728291) 0%, rgba(212,212,217,0.5228466386554622) 35%, rgba(255,255,255,0) 100%);
+    z-index: 100;
+}
+.top-nav {
+    background: rebeccapurple !important;
+}
+
+.top-menu {
+    //display: none !important;
+   
     margin: auto;
     //border: 1px solid red;
     z-index: 1000;
@@ -41,6 +127,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 135px;
+   
     //grid-template-rows: 135px;
     &__logo {
         img {
@@ -71,6 +158,9 @@ body {
             }  
         }
     }
+    .top-menu__music {
+        cursor: pointer;
+    }
     .burder {
         width: 35px;
         height: 35px;
@@ -92,9 +182,6 @@ body {
         }
     }
 }
-
-
-
 
 ////////////////////////// first
 .topper {
@@ -219,6 +306,10 @@ body {
 
     bottom: 60px;
     position: absolute;
+
+}
+
+.mappe-wrap {
     .container {
         display: flex;
         align-items: center;
@@ -228,7 +319,7 @@ body {
         width: 50%;
         background: #fff;
         height: 60vh;
-        
+        max-height: 500px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -273,6 +364,7 @@ body {
         }
     }
 }
+
 .footer {
     position: absolute;
         bottom: 0;
@@ -295,5 +387,69 @@ body {
         }
     }
 }
+
+
+
+.pre-prp {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: $gold;
+    z-index: 12000;
+    #Layer_1 {
+        // width: 110%;
+        position: absolute;
+        left: 0;
+        margin: auto;
+        top: -70px;
+        bottom: 0px;
+        .line {
+            stroke-width:1;
+            stroke: rgba(255, 255, 255, 0.397);
+            fill: rgba(255, 255, 255, 0.644);
+        }
+    }
+    #Layer_2 {
+        // width: 110%;
+        position: absolute;
+        left: 0;
+        margin: auto;
+        top: 70px;
+        bottom: 0px;
+        .line {
+            stroke-width:1;
+            stroke: rgba(255, 255, 255, 0.397);
+            fill: rgba(255, 255, 255, 0.644);
+        }
+    }
+    .prostin {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        top: 0px;
+        //background: rgba(255, 0, 0, 0.329);
+        background: #d2ad5b;
+        z-index: 10000;
+        height: 100%;
+        // animation: slidein 1s linear;
+       
+    }
+    .flower {
+        max-width: 100px;
+        position: absolute;
+        margin: auto;
+        top: 100px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        //z-index: 100000;
+        opacity: 0;
+        transform: scale(.8)
+    }
+}
+
+
 
 @import "./media";

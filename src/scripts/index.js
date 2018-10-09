@@ -53,19 +53,10 @@ $(document).ready( () => {
         fadingEffect: true,
         easingcss3: 'cubic-bezier(.28, 0, 1, 0)',
         afterLoad: () => {
-            //console.log(`shit`)
+           
         },
         onLeave: () => {
-            if( $(window).width() > 1200 ) {
-                tl.to(`.pre-prp`, .5, {width: '100%' })
-                tl.to(`.pre-prp .prostin`, .5, {width:'0%'}).delay(.5)
-                tl.to(`.pre-prp .prostin`, .5, {width:'100%'}).delay(1.5)
-                tl.to(`.pre-prp`, .5, {width: '0%'}).delay(2)
-                
-
-                tl.fromTo(`.pre-prp .flower`, 2, {scale: .2, opacity: 0 }, { scale: 1, opacity: 1 },.2)
-                tl.fromTo(`.pre-prp .flower`, 1, { scale: 1, opacity: 1 }, {scale: .8, opacity: 0 },.2).delay(1.5)
-            }
+           
         }
     })
 

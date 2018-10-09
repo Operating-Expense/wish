@@ -13,6 +13,7 @@ class Resizer {
 class Music {
     play() {
         document.getElementById('myAudio').play();
+
     }
     pause() {
         document.getElementById('myAudio').pause();
@@ -47,29 +48,30 @@ $(document).ready( () => {
 	    lockAnchors: false,
 	    navigation: true,
 	    navigationPosition: 'left',
-	    scrollingSpeed: 2700,
+	    scrollingSpeed: 1900,
         responsiveWidth: 1200,
         fadingEffect: true,
         easingcss3: 'cubic-bezier(.28, 0, 1, 0)',
         afterLoad: () => {
-            console.log(`shit`)
+            //console.log(`shit`)
         },
         onLeave: () => {
             if( $(window).width() > 1200 ) {
-                tl.to(`.pre-prp`, .7, {width: '100%' })
-                tl.to(`.pre-prp .prostin`, .7, {width:'0%'}).delay(.7)
-                tl.to(`.pre-prp .prostin`, .7, {width:'100%'}).delay(2.3)
-                tl.to(`.pre-prp`, .7, {width: '0%'}).delay(2.7)
+                tl.to(`.pre-prp`, .5, {width: '100%' })
+                tl.to(`.pre-prp .prostin`, .5, {width:'0%'}).delay(.5)
+                tl.to(`.pre-prp .prostin`, .5, {width:'100%'}).delay(1.5)
+                tl.to(`.pre-prp`, .5, {width: '0%'}).delay(2)
+                
 
-                tl.fromTo(`.pre-prp .flower`, 2, {scale: .8, opacity: 0 }, { scale: 1, opacity: 1 },.2).delay(.4)
-                tl.fromTo(`.pre-prp .flower`, 1, { scale: 1, opacity: 1 }, {scale: .8, opacity: 0 },.2).delay(2)
+                tl.fromTo(`.pre-prp .flower`, 2, {scale: .2, opacity: 0 }, { scale: 1, opacity: 1 },.2)
+                tl.fromTo(`.pre-prp .flower`, 1, { scale: 1, opacity: 1 }, {scale: .8, opacity: 0 },.2).delay(1.5)
             }
         }
     })
 
     //AUDIO
     // switch on music
-    //setTimeout( () => music.play(), 2000 )
+    setTimeout( () => music.play(), 2000 )
     // switch on - off music
     $(`.top-menu__music`).click( function() {
         let thisis = $(this);
@@ -82,7 +84,7 @@ $(document).ready( () => {
 
 
     //tabs
-    tabsFunc()
+    tabsFunc()  
     
     $('.tabs_item-wrap').slick({
         //infinite: true,
@@ -147,26 +149,29 @@ const afterRender = () => {
 
 const tabsFunc = () => {
 	$('.tab ul.tabs li a').click(function (e) { 
-        
         e.preventDefault()
         let th = $(this)
 
-        var tab = $(`#tab`), 
+            var tab = $(`#tab`), 
             index = th.parent('li').index()
             tabs_wrap = tab.find('.tab_content')
         
-        tab.find('.tabs li').removeClass('current')
-        th.closest('li').addClass('current')
-        
-        tabs_wrap.find(`.tabs_item`).fadeOut('fast')
-        setTimeout( () => {
-            $(`.NextArrow`).click()
-        },150 )
-        setTimeout( () => {
-            tabs_wrap.find(`.tabs_item:eq(${ index })`).fadeIn('slow');
-        }, 900 )
+            tab.find('.tabs li').removeClass('current')
+            th.closest('li').addClass('current')
+            
+            tabs_wrap.find(`.tabs_item`).fadeOut('fast')
+            setTimeout( () => {
+                $(`.NextArrow`).click()
+            },120 )
+            setTimeout( () => {
+                tabs_wrap.find(`.tabs_item:eq(${ index })`).fadeIn('slow');
+            }, 900 )
+       
+       
     } );
 }
+
+
 
 
 
@@ -453,7 +458,7 @@ $(window).resize( function() {
                 let marker = new google.maps.Marker({
                     position: {lat:50.30674118,lng:30.70624383},
                     map:map,
-                    icon: `../media/map-point.png`
+                    icon: './src/media/map-point.png'
                 })
                 marker.addListener('click', toggleBounce);
             }

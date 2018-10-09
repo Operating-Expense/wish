@@ -81,9 +81,23 @@ $color: blue;
         position: relative;
        
         section {
+            position: relative;
+            .serv-art {
+                font-family: 'mbold';
+                color: #000;
+                position: absolute;
+                top: 44%;
+                transform: rotate(-90deg)
+            }
+            .serv-prev {
+                left: -45px;
+            }
+            .serv-next {
+                right: 0;
+            }
             //border: 1px solid darkblue;
             display: flex !important;
-            justify-content: space-around;
+            justify-content: center;
             width: 100%;
             height: 100%;
             // .left {
@@ -128,6 +142,7 @@ $color: blue;
         transition: 2s ease-in-out;
         transition-delay: .4;
         transform: translateX(20px) ;
+        margin-right: 34px;
         &_sp_wrap {
             position: absolute;
             left: 0;
@@ -186,7 +201,7 @@ $color: blue;
          
             &--title {
                 font-family: 'mbold';
-                font-size: 22px;
+                font-size: 18px;
                 margin-bottom: 0;
             }
             .counts {
@@ -199,6 +214,7 @@ $color: blue;
                         content: url('../media/cardpay.svg');
                     }
                 }
+
                 &--time {
                     width: 50%;
                     position: relative;
